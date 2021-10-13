@@ -16,6 +16,8 @@ public class Home extends javax.swing.JFrame {
      */
     public Home() {
         initComponents();
+         setLocationRelativeTo(null);
+         setResizable(false);
     }
 
     /**
@@ -31,60 +33,67 @@ public class Home extends javax.swing.JFrame {
         btnsalir = new javax.swing.JButton();
         btnactividadesrecientes = new javax.swing.JButton();
         btnsaldoactual = new javax.swing.JButton();
-        btncomprar = new javax.swing.JButton();
         btninfocuenta = new javax.swing.JButton();
         btntransferir = new javax.swing.JButton();
         anuncios = new javax.swing.JTextField();
         nombreapp = new javax.swing.JLabel();
-        homefondo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jPanel1.setBackground(new java.awt.Color(159, 100, 216));
+        jPanel1.setBorder(javax.swing.BorderFactory.createMatteBorder(10, 5, 10, 5, new java.awt.Color(0, 0, 0)));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        btnsalir.setForeground(new java.awt.Color(0, 0, 119));
         btnsalir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/salir.png"))); // NOI18N
-        btnsalir.setText("Salir de la cuenta");
+        btnsalir.setBorderPainted(false);
+        btnsalir.setContentAreaFilled(false);
         btnsalir.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jPanel1.add(btnsalir, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 560, 150, -1));
+        jPanel1.add(btnsalir, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 530, 350, -1));
 
+        btnactividadesrecientes.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
         btnactividadesrecientes.setText("Actividades Recientes");
+        btnactividadesrecientes.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(106, 46, 205)));
+        btnactividadesrecientes.setContentAreaFilled(false);
         btnactividadesrecientes.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jPanel1.add(btnactividadesrecientes, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 430, 190, -1));
+        btnactividadesrecientes.setFocusPainted(false);
+        jPanel1.add(btnactividadesrecientes, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 330, 120, 60));
 
+        btnsaldoactual.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         btnsaldoactual.setText("Saldo Actual");
+        btnsaldoactual.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(106, 46, 205)));
+        btnsaldoactual.setContentAreaFilled(false);
         btnsaldoactual.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnsaldoactual.setPreferredSize(new java.awt.Dimension(80, 25));
-        jPanel1.add(btnsaldoactual, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 340, 110, 50));
+        jPanel1.add(btnsaldoactual, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 330, 120, 60));
 
-        btncomprar.setText("Comprar");
-        btncomprar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        btncomprar.setMaximumSize(new java.awt.Dimension(80, 23));
-        btncomprar.setMinimumSize(new java.awt.Dimension(80, 23));
-        btncomprar.setPreferredSize(new java.awt.Dimension(80, 25));
-        jPanel1.add(btncomprar, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 340, 110, 50));
-
+        btninfocuenta.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         btninfocuenta.setText("Info.Cuenta");
+        btninfocuenta.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(106, 46, 205)));
+        btninfocuenta.setContentAreaFilled(false);
         btninfocuenta.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jPanel1.add(btninfocuenta, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 250, 110, 50));
+        jPanel1.add(btninfocuenta, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 210, 120, 60));
 
+        btntransferir.setBackground(new java.awt.Color(255, 255, 255));
+        btntransferir.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         btntransferir.setText("Transferir");
+        btntransferir.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(106, 46, 205)));
+        btntransferir.setContentAreaFilled(false);
         btntransferir.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jPanel1.add(btntransferir, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 250, 110, 50));
+        btntransferir.setFocusPainted(false);
+        jPanel1.add(btntransferir, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 210, 120, 60));
 
         anuncios.setEditable(false);
-        jPanel1.add(anuncios, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 80, 230, 50));
+        jPanel1.add(anuncios, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 100, 230, 50));
 
         nombreapp.setFont(new java.awt.Font("Trebuchet MS", 1, 24)); // NOI18N
-        nombreapp.setForeground(new java.awt.Color(255, 255, 255));
+        nombreapp.setForeground(new java.awt.Color(0, 0, 120));
         nombreapp.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        nombreapp.setText("PLF");
-        jPanel1.add(nombreapp, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 20, 210, 40));
+        nombreapp.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/logo.png"))); // NOI18N
+        jPanel1.add(nombreapp, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 20, 210, 60));
 
-        homefondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/Home.png"))); // NOI18N
-        jPanel1.add(homefondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
-
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 340, 590));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -128,12 +137,10 @@ public class Home extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField anuncios;
     private javax.swing.JButton btnactividadesrecientes;
-    private javax.swing.JButton btncomprar;
     private javax.swing.JButton btninfocuenta;
     private javax.swing.JButton btnsaldoactual;
     private javax.swing.JButton btnsalir;
     private javax.swing.JButton btntransferir;
-    private javax.swing.JLabel homefondo;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JLabel nombreapp;
     // End of variables declaration//GEN-END:variables

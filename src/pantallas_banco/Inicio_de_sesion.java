@@ -16,6 +16,8 @@ public class Inicio_de_sesion extends javax.swing.JFrame {
      */
     public Inicio_de_sesion() {
         initComponents();
+        setLocationRelativeTo(null);
+        setResizable(false);
     }
 
     /**
@@ -32,12 +34,12 @@ public class Inicio_de_sesion extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         pass = new javax.swing.JPasswordField();
         viewpass = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
+        logo = new javax.swing.JLabel();
+        btninicio = new javax.swing.JButton();
         viewusu = new javax.swing.JTextField();
         usuario = new javax.swing.JTextField();
         crearcuenta = new javax.swing.JLabel();
         crearcuenta1 = new javax.swing.JLabel();
-        etifondo = new javax.swing.JLabel();
 
         jMenuItem1.setText("jMenuItem1");
 
@@ -45,6 +47,8 @@ public class Inicio_de_sesion extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        jPanel1.setBackground(new java.awt.Color(159, 100, 216));
+        jPanel1.setBorder(javax.swing.BorderFactory.createMatteBorder(10, 5, 10, 5, new java.awt.Color(0, 0, 0)));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         pass.setFont(new java.awt.Font("Trebuchet MS", 1, 11)); // NOI18N
@@ -52,24 +56,33 @@ public class Inicio_de_sesion extends javax.swing.JFrame {
         jPanel1.add(pass, new org.netbeans.lib.awtextra.AbsoluteConstraints(58, 302, 234, 31));
 
         viewpass.setEditable(false);
+        viewpass.setBackground(new java.awt.Color(0, 0, 119));
         viewpass.setFont(new java.awt.Font("Trebuchet MS", 1, 11)); // NOI18N
+        viewpass.setForeground(new java.awt.Color(255, 255, 255));
         viewpass.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         viewpass.setText("Contraseña");
         viewpass.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jPanel1.add(viewpass, new org.netbeans.lib.awtextra.AbsoluteConstraints(58, 253, 234, 31));
 
-        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/login.png"))); // NOI18N
-        jButton1.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        logo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/logo.png"))); // NOI18N
+        jPanel1.add(logo, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 40, 80, 60));
+
+        btninicio.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/login.png"))); // NOI18N
+        btninicio.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        btninicio.setBorderPainted(false);
+        btninicio.setContentAreaFilled(false);
+        btninicio.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btninicio.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                btninicioActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 361, 230, 50));
+        jPanel1.add(btninicio, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 361, 230, 50));
 
         viewusu.setEditable(false);
+        viewusu.setBackground(new java.awt.Color(0, 0, 119));
         viewusu.setFont(new java.awt.Font("Trebuchet MS", 1, 11)); // NOI18N
+        viewusu.setForeground(new java.awt.Color(255, 255, 255));
         viewusu.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         viewusu.setText("Usuario");
         viewusu.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -80,39 +93,36 @@ public class Inicio_de_sesion extends javax.swing.JFrame {
         jPanel1.add(usuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(58, 192, 234, 28));
 
         crearcuenta.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        crearcuenta.setForeground(new java.awt.Color(0, 153, 255));
+        crearcuenta.setForeground(new java.awt.Color(106, 46, 205));
         crearcuenta.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         crearcuenta.setText("¿Olvidaste tu contraseña?");
         crearcuenta.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jPanel1.add(crearcuenta, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 470, 240, 20));
 
         crearcuenta1.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        crearcuenta1.setForeground(new java.awt.Color(0, 153, 255));
+        crearcuenta1.setForeground(new java.awt.Color(106, 46, 205));
         crearcuenta1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         crearcuenta1.setText("Crear Cuenta");
         crearcuenta1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jPanel1.add(crearcuenta1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 430, 240, 20));
 
-        etifondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/Fondo1.2.png"))); // NOI18N
-        jPanel1.add(etifondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 350, 600));
-
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 350, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 600, Short.MAX_VALUE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void btninicioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btninicioActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_btninicioActionPerformed
 
     /**
      * @param args the command line arguments
@@ -150,13 +160,13 @@ public class Inicio_de_sesion extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btninicio;
     private javax.swing.JLabel crearcuenta;
     private javax.swing.JLabel crearcuenta1;
-    private javax.swing.JLabel etifondo;
-    private javax.swing.JButton jButton1;
     private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JLabel logo;
     private javax.swing.JPasswordField pass;
     private javax.swing.JTextField usuario;
     private javax.swing.JTextField viewpass;

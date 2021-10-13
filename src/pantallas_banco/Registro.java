@@ -16,6 +16,8 @@ public class Registro extends javax.swing.JFrame {
      */
     public Registro() {
         initComponents();
+         setLocationRelativeTo(null);
+         setResizable(false);
     }
 
     /**
@@ -38,7 +40,7 @@ public class Registro extends javax.swing.JFrame {
         email = new javax.swing.JTextField();
         usuario1 = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
-        etifondo = new javax.swing.JLabel();
+        btn1 = new javax.swing.JButton();
 
         jMenuItem1.setText("jMenuItem1");
 
@@ -46,6 +48,8 @@ public class Registro extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        jPanel1.setBackground(new java.awt.Color(159, 100, 216));
+        jPanel1.setBorder(javax.swing.BorderFactory.createMatteBorder(10, 5, 10, 5, new java.awt.Color(0, 0, 0)));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         pass1.setFont(new java.awt.Font("Trebuchet MS", 1, 11)); // NOI18N
@@ -53,31 +57,42 @@ public class Registro extends javax.swing.JFrame {
         jPanel1.add(pass1, new org.netbeans.lib.awtextra.AbsoluteConstraints(58, 302, 234, 31));
 
         viewpass.setEditable(false);
+        viewpass.setBackground(new java.awt.Color(0, 0, 119));
         viewpass.setFont(new java.awt.Font("Trebuchet MS", 1, 11)); // NOI18N
+        viewpass.setForeground(new java.awt.Color(255, 255, 255));
         viewpass.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         viewpass.setText("Email");
         viewpass.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jPanel1.add(viewpass, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 360, 234, 31));
 
         viewpass1.setEditable(false);
+        viewpass1.setBackground(new java.awt.Color(0, 0, 119));
         viewpass1.setFont(new java.awt.Font("Trebuchet MS", 1, 11)); // NOI18N
+        viewpass1.setForeground(new java.awt.Color(255, 255, 255));
         viewpass1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         viewpass1.setText("Contraseña");
         viewpass1.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jPanel1.add(viewpass1, new org.netbeans.lib.awtextra.AbsoluteConstraints(58, 253, 234, 31));
 
-        jButton1.setText("Crear Cuenta");
+        jButton1.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jButton1.setForeground(new java.awt.Color(106, 46, 205));
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/agregar-simbolo-de-usuario.png"))); // NOI18N
         jButton1.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jButton1.setBorderPainted(false);
+        jButton1.setContentAreaFilled(false);
         jButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton1.setFocusPainted(false);
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 500, 230, 50));
+        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 490, 230, 50));
 
         viewusu.setEditable(false);
+        viewusu.setBackground(new java.awt.Color(0, 0, 119));
         viewusu.setFont(new java.awt.Font("Trebuchet MS", 1, 11)); // NOI18N
+        viewusu.setForeground(new java.awt.Color(255, 255, 255));
         viewusu.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         viewusu.setText("Usuario");
         viewusu.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -91,23 +106,30 @@ public class Registro extends javax.swing.JFrame {
         jPanel1.add(usuario1, new org.netbeans.lib.awtextra.AbsoluteConstraints(58, 192, 234, 28));
 
         jLabel1.setFont(new java.awt.Font("Trebuchet MS", 1, 24)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(255, 255, 102));
+        jLabel1.setForeground(new java.awt.Color(1, 0, 39));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Registro");
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 44, 250, 40));
 
-        etifondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/Fondo1.2.png"))); // NOI18N
-        jPanel1.add(etifondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 350, 600));
+        btn1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/atras.png"))); // NOI18N
+        btn1.setBorderPainted(false);
+        btn1.setContentAreaFilled(false);
+        btn1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn1ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(btn1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 531, 60, 50));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 350, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 600, Short.MAX_VALUE)
         );
 
         pack();
@@ -116,6 +138,10 @@ public class Registro extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void btn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btn1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -153,8 +179,8 @@ public class Registro extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btn1;
     private javax.swing.JTextField email;
-    private javax.swing.JLabel etifondo;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JMenuItem jMenuItem1;

@@ -16,6 +16,8 @@ public class Detalles_de_la_cuenta extends javax.swing.JFrame {
      */
     public Detalles_de_la_cuenta() {
         initComponents();
+         setLocationRelativeTo(null);
+         setResizable(false);
     }
 
     /**
@@ -36,17 +38,22 @@ public class Detalles_de_la_cuenta extends javax.swing.JFrame {
         varnumero = new javax.swing.JLabel();
         vardireccion = new javax.swing.JLabel();
         varnacionalidad = new javax.swing.JLabel();
-        btnregresar = new javax.swing.JButton();
-        detallesfondo = new javax.swing.JLabel();
+        btn1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        jPanel1.setBackground(new java.awt.Color(159, 100, 216));
+        jPanel1.setBorder(javax.swing.BorderFactory.createMatteBorder(10, 5, 10, 5, new java.awt.Color(0, 0, 0)));
+        jPanel1.setForeground(new java.awt.Color(159, 100, 216));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         titulo.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        titulo.setForeground(new java.awt.Color(255, 255, 255));
+        titulo.setForeground(new java.awt.Color(1, 0, 39));
         titulo.setText("Detalles de la cuenta:");
         jPanel1.add(titulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 50, -1, -1));
+
+        contenedor.setBackground(new java.awt.Color(106, 46, 205));
+        contenedor.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
 
         varnombre.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         varnombre.setText("Nombre:");
@@ -79,7 +86,7 @@ public class Detalles_de_la_cuenta extends javax.swing.JFrame {
                     .addComponent(varnumero, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(vardireccion, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(varnacionalidad, javax.swing.GroupLayout.DEFAULT_SIZE, 190, Short.MAX_VALUE))
-                .addContainerGap(110, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         contenedorLayout.setVerticalGroup(
             contenedorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -96,22 +103,26 @@ public class Detalles_de_la_cuenta extends javax.swing.JFrame {
                 .addComponent(vardireccion, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(varnacionalidad, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(26, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         jPanel1.add(contenedor, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 110, 310, 230));
 
-        btnregresar.setText("Regresar");
-        jPanel1.add(btnregresar, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 570, -1, -1));
-
-        detallesfondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/Home.png"))); // NOI18N
-        jPanel1.add(detallesfondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -10, 350, 620));
+        btn1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/atras.png"))); // NOI18N
+        btn1.setBorderPainted(false);
+        btn1.setContentAreaFilled(false);
+        btn1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn1ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(btn1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 530, 60, 50));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 350, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -121,6 +132,16 @@ public class Detalles_de_la_cuenta extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void btn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btn1ActionPerformed
+
+    public void transparenciaButton(){
+    btn1.setOpaque(false);
+    btn1.setContentAreaFilled(false);;
+    btn1.setBorderPainted(false);
+    
+    }
     /**
      * @param args the command line arguments
      */
@@ -157,9 +178,8 @@ public class Detalles_de_la_cuenta extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnregresar;
+    private javax.swing.JButton btn1;
     private javax.swing.JPanel contenedor;
-    private javax.swing.JLabel detallesfondo;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JLabel titulo;
     private javax.swing.JLabel varcorreo;
